@@ -4,6 +4,9 @@
   "description": "A high-performance API for managing flash sales with real-time inventory updates built using MongoDB, Mongoose, Express, and TypeScript.",
   "main": "src/server.ts",
   "scripts": {
+    "dev": "ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,7 +31,9 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "helmet": "^8.0.0",
-    "morgan": "^1.10.0"
+    "mongoose": "^8.11.0",
+    "morgan": "^1.10.0",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "@types/compression": "^1.7.5",
