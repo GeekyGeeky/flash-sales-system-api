@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "target": "ES2022",                    // Latest ES features for Node.js
+      "module": "ESNext",                    // Use ES Modules
+      "moduleResolution": "Node",            // Resolve Node.js-style module imports
+      "rootDir": "src",                      // Source files location
+      "outDir": "dist",                      // Build output folder
+      "esModuleInterop": true,               // Allow default import from CJS modules
+      "strict": true,                        // Enable strict type-checking
+      "skipLibCheck": true,                  // Skip type checks on declaration files
+      "resolveJsonModule": true,             // Allow importing JSON files
+      "sourceMap": true,                     // Generate .map files
+      "forceConsistentCasingInFileNames": true,
+      "noImplicitAny": true,
+      "experimentalDecorators": true,        // If you're using decorators
+      "emitDecoratorMetadata": true          // If you're using decorators
+    },
+    "include": ["src/**/*.ts"],             // Include TypeScript files
+    "exclude": ["node_modules", "dist"]      // Ignore build and dependencies
+  }
+  

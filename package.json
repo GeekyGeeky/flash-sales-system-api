@@ -1,0 +1,42 @@
+{
+  "name": "flash-sales-system-api",
+  "version": "1.0.0",
+  "description": "A high-performance API for managing flash sales with real-time inventory updates built using MongoDB, Mongoose, Express, and TypeScript.",
+  "main": "src/server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeekyGeeky/flash-sales-system-api.git"
+  },
+  "keywords": [
+    "node.js",
+    "mongoDB",
+    "express",
+    "TypeScript"
+  ],
+  "author": "GeekyGeeky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GeekyGeeky/flash-sales-system-api/issues"
+  },
+  "homepage": "https://github.com/GeekyGeeky/flash-sales-system-api#readme",
+  "dependencies": {
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.13.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
