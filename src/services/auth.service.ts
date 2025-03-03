@@ -55,7 +55,7 @@ class AuthService {
     });
 
     if (!user) {
-      throw new NotFoundError("User not found");
+      throw new UnauthorizedError("Invalid credentials");
     }
 
     // Check password
