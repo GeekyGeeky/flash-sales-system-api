@@ -4,6 +4,7 @@ import helmet from "helmet";
 import compression from "compression";
 import morgan from "morgan";
 import { errorHandler } from "./middleware/error.middleware";
+import env from "./config/environment";
 
 const app: Application = express();
 
@@ -18,6 +19,15 @@ app.use(compression()); // Compress responses
 
 app.use(morgan("dev"));
 
+// Health check endpoint
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "success",
+    message: "Server is healthy",
+    version: process.env.npm_package_version || "1.0.0",
+    environment: env.NODE_ENV,
+  });
+});
 
 // 404 handler
 app.use((req, res) => {
