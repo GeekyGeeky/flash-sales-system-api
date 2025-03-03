@@ -5,6 +5,7 @@ import compression from "compression";
 import morgan from "morgan";
 import { errorHandler } from "./middleware/error.middleware";
 import env from "./config/environment";
+import authRoutes from "./routes/auth.routes";
 
 const app: Application = express();
 
@@ -28,6 +29,9 @@ app.get("/health", (req, res) => {
     environment: env.NODE_ENV,
   });
 });
+
+// API routes
+app.use("/api/auth", authRoutes);
 
 // 404 handler
 app.use((req, res) => {
