@@ -10,7 +10,6 @@ A high-performance API for managing flash sales with real-time inventory updates
 - **User Authentication**: Secure JWT-based authentication system.
 - **Rate Limiting**: Prevents abuse with configurable rate limiting on critical endpoints.
 - **Leaderboard API**: Shows chronological purchases during sales.
-- **Dockerized Deployment**: Easy setup with Docker and docker-compose.
 - **Production-Grade Security**: Secure environment variable handling, helmet protection, and more.
 
 ## Tech Stack
@@ -19,7 +18,6 @@ A high-performance API for managing flash sales with real-time inventory updates
 - **Database**: MongoDB with Mongoose ODM
 - **Language**: TypeScript
 - **Authentication**: JWT
-- **Deployment**: Docker & Docker Compose
 - **Logging**: Winston
 
 ## Architecture
@@ -37,8 +35,7 @@ The application follows a scalable, maintainable architecture with clear separat
 ## Requirements
 
 - Node.js (v18 or higher)
-- Docker & Docker Compose
-- MongoDB via run-rs for replica sets (<https://www.npmjs.com/package/run-rs>) (or use the dockerized version)
+- MongoDB via run-rs for replica sets (<https://www.npmjs.com/package/run-rs>)
 
 ## Getting Started
 
