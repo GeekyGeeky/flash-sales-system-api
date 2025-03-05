@@ -21,7 +21,9 @@ export default class SaleService {
     });
 
     if (existingActiveSale) {
-      throw new BadRequestError("An active sale already exists for this product");
+      throw new BadRequestError(
+        "An active sale already exists for this product"
+      );
     }
 
     // Create new sale with default values
@@ -97,9 +99,16 @@ export default class SaleService {
       throw new NotFoundError("Sale not found");
     }
 
-    // Check if trying to change product for an active sale
-    if (updateData.productId && sale.isActive) {
-      throw new BadRequestError("Cannot change product for an active sale");
+    if (updateData.productId) {
+      const product = await Product.findById(updateData.productId);
+      if (!product) {
+        throw new BadRequestError("Product not found");
+      }
+
+      // Check if trying to change product for an active sale
+      if (sale.isActive) {
+        throw new BadRequestError("Cannot change product for an active sale");
+      }
     }
 
     // Apply updates
