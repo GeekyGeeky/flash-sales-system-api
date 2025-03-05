@@ -7,6 +7,8 @@ import { errorHandler } from "./middleware/error.middleware";
 import env from "./config/environment";
 import authRoutes from "./routes/auth.routes";
 import productRoutes from "./routes/product.routes";
+import purchaseRoutes from "./routes/purchase.routes";
+import saleRoutes from "./routes/sale.routes";
 
 const app: Application = express();
 
@@ -34,6 +36,8 @@ app.get("/health", (req, res) => {
 // API routes
 app.use("/api/auth", authRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/sales', saleRoutes);
+app.use('/api/purchases', purchaseRoutes);
 
 // 404 handler
 app.use((req, res) => {
