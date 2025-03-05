@@ -83,7 +83,7 @@ export default class SaleController {
       const activeSale = await this.saleService.getActiveSale();
 
       if (!activeSale) {
-        responseHandler.success(res, "No active sales found", null);
+        responseHandler.success(res, "No active sales found", []);
         return;
       }
 
