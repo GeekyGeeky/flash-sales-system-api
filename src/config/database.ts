@@ -5,7 +5,7 @@ import logger from "./logger";
 // Configure mongoose options
 const mongooseOptions = {
   autoIndex: env.NODE_ENV !== "production", // Don't auto-build indexes in production
-  serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 30s
+  serverSelectionTimeoutMS: 15000, // Timeout after 15s instead of 30s
   socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
 };
 
