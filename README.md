@@ -42,30 +42,7 @@ The application follows a scalable, maintainable architecture with clear separat
 
 ## Getting Started
 
-### Using Docker (Recommended)
-
-1. Clone the repository
-
-   ```bash
-   git clone https://github.com/GeekyGeeky/flash-sales-system-api.git
-   cd flash-sales-system-api
-   ```
-
-2. Copy the example env file and modify as needed
-
-   ```bash
-   cp .env.example .env
-   ```
-
-3. Start the application using Docker Compose
-
-   ```bash
-   docker-compose up -d
-   ```
-
-The API will be available at <http://localhost:3000>
-
-### Manual Setup
+### Project Setup
 
 1. Clone the repository
 
@@ -86,7 +63,7 @@ The API will be available at <http://localhost:3000>
    npm install
    ```
 
-4. Start MongoDB (if not using Docker)
+4. Start MongoDB
 
    ```bash
    # You'll need to have run-rs installed locally
