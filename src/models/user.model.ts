@@ -74,7 +74,7 @@ UserSchema.methods.comparePassword = async function (
 };
 
 // Create indexes for frequently queried fields
-UserSchema.index({ email: 1 });
-UserSchema.index({ username: 1 });
+// UserSchema.index({ email: 1 });
+// UserSchema.index({ username: 1 });
 
 export default mongoose.model<IUser>("User", UserSchema);
