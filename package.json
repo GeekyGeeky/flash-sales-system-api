@@ -4,9 +4,10 @@
   "description": "A high-performance API for managing flash sales with real-time inventory updates built using MongoDB, Mongoose, Express, and TypeScript.",
   "main": "src/server.ts",
   "scripts": {
-    "dev": "ts-node src/server.ts",
+    "dev": "nodemon",
     "build": "tsc",
     "start": "node dist/index.js",
+    "create-admin": "ts-node src/create-admin.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +28,7 @@
   "homepage": "https://github.com/GeekyGeeky/flash-sales-system-api#readme",
   "dependencies": {
     "bcryptjs": "^3.0.2",
+    "commander": "^13.1.0",
     "compression": "^1.8.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
@@ -45,6 +47,7 @@
     "@types/jsonwebtoken": "^9.0.9",
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.13.7",
+    "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   }
