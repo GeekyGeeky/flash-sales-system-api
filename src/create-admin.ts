@@ -16,6 +16,7 @@ import readline from "readline";
 import AuthService from "./services/auth.service";
 import { RegisterDto } from "./types/auth.types";
 import connectDatabase from "./config/database";
+import { delay } from "./utils/helpers";
 
 // Load environment variables
 dotenv.config();
@@ -91,7 +92,7 @@ const promptUserDetails = async (): Promise<RegisterDto & { role: string }> => {
   const username =
     options.username ||
     (await new Promise<string>((resolve) => {
-      rl.question("\n\nEnter username: ", resolve);
+      rl.question("\nEnter username: ", resolve);
     }));
 
   const email =
@@ -135,6 +136,8 @@ const createAdmin = async (): Promise<void> => {
 
     // Connect to database
     await connectDatabase();
+
+    await delay(2000);
 
     // Get user details
     const userData = await promptUserDetails();
