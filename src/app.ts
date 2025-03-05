@@ -6,6 +6,7 @@ import morgan from "morgan";
 import { errorHandler } from "./middleware/error.middleware";
 import env from "./config/environment";
 import authRoutes from "./routes/auth.routes";
+import productRoutes from "./routes/product.routes";
 
 const app: Application = express();
 
@@ -32,6 +33,7 @@ app.get("/health", (req, res) => {
 
 // API routes
 app.use("/api/auth", authRoutes);
+app.use('/api/products', productRoutes);
 
 // 404 handler
 app.use((req, res) => {
