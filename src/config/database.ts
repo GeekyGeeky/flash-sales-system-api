@@ -1,4 +1,3 @@
-// src/config/database.ts
 import mongoose from "mongoose";
 import env from "./environment";
 import logger from "./logger";
