@@ -74,6 +74,34 @@ class AuthService {
   }
 
   /**
+   * Create a user with specific role
+   * This is used internally for creating admin/superadmin users
+   */
+  public async createUserWithRole(
+    userData: RegisterDto & { role: string }
+  ): Promise<Partial<IUser>> {
+    // Check if user with same email or username already exists
+    const existingUser = await User.findOne({
+      $or: [{ email: userData.email }, { username: userData.username }],
+    });
+
+    if (existingUser) {
+      throw new BadRequestError(
+        existingUser.email === userData.email
+          ? "Email already in use"
+          : "Username already in use"
+      );
+    }
+
+    // Create new user with specified role
+    const user = new User(userData);
+    await user.save();
+
+    // Return user data without password
+    return this.excludePassword(user);
+  }
+
+  /**
    * Generate JWT token
    */
   private generateToken(user: IUser): string {
