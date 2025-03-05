@@ -49,8 +49,8 @@ class AuthService {
     // Find user by email
     const user = await User.findOne({
       $or: [
-        { email: loginData.emailOrUsername },
-        { username: loginData.emailOrUsername },
+        { email: loginData.identifier },
+        { username: loginData.identifier },
       ],
     });
 
